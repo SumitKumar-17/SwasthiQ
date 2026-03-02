@@ -1,4 +1,4 @@
-const API_BASE = "https://swasthi-q-lq4k.vercel.app/api"
+const API_BASE = "https://swasthi-q-flame.vercel.app/api"
     // process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
 
 async function fetchApi<T>(endpoint: string, options?: RequestInit): Promise<T> {
