@@ -15,22 +15,8 @@ import {
 } from "lucide-react";
 import { api, Medicine, InventoryOverview } from "@/lib/api";
 import AddMedicineModal from "@/components/AddMedicineModal";
-
-function formatCurrency(amount: number): string {
-    return new Intl.NumberFormat("en-IN", {
-        style: "currency",
-        currency: "INR",
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-    }).format(amount);
-}
-
-const statusStyles: Record<string, string> = {
-    Active: "bg-emerald-50 text-emerald-600 border-emerald-200",
-    "Low Stock": "bg-amber-50 text-amber-600 border-amber-200",
-    Expired: "bg-red-50 text-red-600 border-red-200",
-    "Out of Stock": "bg-gray-100 text-gray-500 border-gray-200",
-};
+import { formatCurrency, statusStyles } from "../../../common";
+import MedicineColumns from "@/components/MedicineColumns";
 
 export default function InventoryPage() {
     const [overview, setOverview] = useState<InventoryOverview | null>(null);
@@ -234,21 +220,7 @@ export default function InventoryPage() {
 
                     <div className="overflow-x-auto">
                         <table className="w-full text-sm">
-                            <thead>
-                                <tr className="border-b border-border">
-                                    <th className="text-left px-4 py-3 font-semibold text-text-secondary text-xs uppercase tracking-wider">Medicine Name</th>
-                                    <th className="text-left px-4 py-3 font-semibold text-text-secondary text-xs uppercase tracking-wider">Generic Name</th>
-                                    <th className="text-left px-4 py-3 font-semibold text-text-secondary text-xs uppercase tracking-wider">Category</th>
-                                    <th className="text-left px-4 py-3 font-semibold text-text-secondary text-xs uppercase tracking-wider">Batch No</th>
-                                    <th className="text-left px-4 py-3 font-semibold text-text-secondary text-xs uppercase tracking-wider">Expiry Date</th>
-                                    <th className="text-left px-4 py-3 font-semibold text-text-secondary text-xs uppercase tracking-wider">Quantity</th>
-                                    <th className="text-left px-4 py-3 font-semibold text-text-secondary text-xs uppercase tracking-wider">Cost Price</th>
-                                    <th className="text-left px-4 py-3 font-semibold text-text-secondary text-xs uppercase tracking-wider">MRP</th>
-                                    <th className="text-left px-4 py-3 font-semibold text-text-secondary text-xs uppercase tracking-wider">Supplier</th>
-                                    <th className="text-left px-4 py-3 font-semibold text-text-secondary text-xs uppercase tracking-wider">Status</th>
-                                    <th className="text-left px-4 py-3 font-semibold text-text-secondary text-xs uppercase tracking-wider">Actions</th>
-                                </tr>
-                            </thead>
+                          <MedicineColumns/>
                             <tbody>
                                 {medicines.map((med) => (
                                     <tr key={med.id} className="border-b border-border/50 hover:bg-gray-50/50 transition-colors">
