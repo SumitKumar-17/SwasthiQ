@@ -6,6 +6,10 @@ Backend (https://swasthi-q-flame.vercel.app)
 
 Frontend (https://swasthiq-six.vercel.app)
 
+Dashboard page: (https://swasthiq-six.vercel.app)
+
+Inventory Page: (https://swasthiq-six.vercel.app/inventory)
+
 ## Tech Stack
 
 | Layer | Technology |
@@ -112,15 +116,3 @@ All endpoints return structured JSON. Error responses follow:
   "detail": "Error message"
 }
 ```
-
-### Status Codes
-
-| Code | Meaning |
-|------|---------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Deleted |
-| 400 | Bad Request |
-| 404 | Not Found |
-| 422 | Validation Error |
-| 500 | Internal Server Error |
