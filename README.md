@@ -2,6 +2,10 @@
 
 A full-stack Pharmacy CRM system for managing inventory, sales, and purchase orders.
 
+Backend (https://swasthi-q-flame.vercel.app)
+
+Frontend (https://swasthiq-six.vercel.app)
+
 ## Tech Stack
 
 | Layer | Technology |
