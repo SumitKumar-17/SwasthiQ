@@ -19,39 +19,6 @@ Inventory Page: (https://swasthiq-six.vercel.app/inventory)
 | Frontend | Next.js 16, React 19, TypeScript, Tailwind CSS 4 |
 | Icons | Lucide React |
 
-## Project Structure
-
-```
-SwasthiQ/
-├── backend/
-│   ├── app/
-│   │   ├── routes/
-│   │   │   ├── dashboard.py
-│   │   │   ├── inventory.py
-│   │   │   └── sales.py
-│   │   ├── database.py
-│   │   ├── main.py
-│   │   ├── models.py
-│   │   ├── schemas.py
-│   │   └── seed.py
-│   ├── .env
-│   └── requirements.txt
-├── frontend/
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── inventory/page.tsx
-│   │   │   ├── globals.css
-│   │   │   ├── layout.tsx
-│   │   │   └── page.tsx
-│   │   ├── components/
-│   │   │   ├── AddMedicineModal.tsx
-│   │   │   └── Sidebar.tsx
-│   │   └── lib/
-│   │       └── api.ts
-│   └── package.json
-└── README.md
-```
-
 ## Setup & Running
 
 > In the Backend .env you need a DATABASE_URL and the frontend env need a NEXT_PUBLIC_API_URL where the backend is hosted
